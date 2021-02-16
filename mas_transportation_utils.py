@@ -45,3 +45,30 @@ def random_edge(graph, nb_edges, delete=True):
             graph.add_edge(non_edge[0], non_edge[1])
 
     return graph
+
+def print_user_perception(user, G, step_by_step=False):
+    
+    pos = nx.spring_layout(G, iterations=1000)  # positions for all nodes
+    # nodes
+    options = {"node_size": 300, "alpha": 0.8}
+    colors = ['orange','pink','yellow','cyan','purple']
+    if step_by_step == True :
+        for i in range(len(user.node_ranges)):
+            color = colors[i]
+            nx.draw_networkx_nodes(G, pos, nodelist=list(user.node_ranges[i]), node_color=color, **options)
+
+            nx.draw_networkx_nodes(G, pos, nodelist=[user.v_r], node_color="g", **options)
+            nx.draw_networkx_nodes(G, pos, nodelist=[user.v_arr], node_color="r", **options)
+            nx.draw(G, pos, node_color='black', node_size=20, with_labels=False)
+            plt.title("Road network")
+            plt.show()
+    else :
+        for i in range(len(user.node_ranges)):
+            color = colors[i]
+            nx.draw_networkx_nodes(G, pos, nodelist=list(user.node_ranges[i]), node_color=color, **options)
+
+        nx.draw_networkx_nodes(G, pos, nodelist=[user.v_r], node_color="g", **options)
+        nx.draw_networkx_nodes(G, pos, nodelist=[user.v_arr], node_color="r", **options)
+        nx.draw(G, pos, node_color='black', node_size=20, with_labels=False)
+        plt.title("Road network")
+        plt.show()
