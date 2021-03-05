@@ -72,3 +72,43 @@ def print_user_perception(user, G, step_by_step=False):
         nx.draw(G, pos, node_color='black', node_size=20, with_labels=False)
         plt.title("Road network")
         plt.show()
+
+
+#fonction utile pour plus tard
+#recupere tout les chemins d'un noeud à un autre avec un cutoff de w basé sur la valeur des arretes
+def all_paths(G, source, target, w):
+    cutoff = len(G)-1
+    visited = [source]
+    stack = [iter(G[source])]
+    weight = 0
+    while stack:
+        children = stack[-1]
+        child = next(children, None)
+        if child is None:
+            stack.pop()
+            visited.pop()
+        elif len(visited) < cutoff:
+            if child == target:
+                if (visited[-1],child) in G.nodes():
+                    temp = G[visited[-1]][child]['weight']
+                else:
+                    temp = G[child][visited[-1]]['weight']
+                if weight+temp <= w:
+                    yield visited + [target]
+            elif child not in visited:
+                if (visited[-1],child) in G.nodes():
+                    weight += G[visited[-1]][child]['weight']
+                else:
+                    weight += G[child][visited[-1]]['weight']
+                visited.append(child)
+                stack.append(iter(G[child]))
+        else: 
+            if child == target or target in children:
+                if (visited[-1],child) in G.nodes():
+                    temp = G[visited[-1]][child]['weight']
+                else:
+                    temp = G[child][visited[-1]]['weight']
+                if weight+temp <= w:
+                    yield visited + [target]
+            stack.pop()
+            visited.pop()
