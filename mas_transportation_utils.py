@@ -76,7 +76,7 @@ def print_user_perception(user, G, step_by_step=False):
 
 #fonction utile pour plus tard
 #recupere tout les chemins d'un noeud à un autre avec un cutoff de w basé sur la valeur des arretes
-def all_paths(G, source, target, w):
+def all_paths(G, source, target, weight_name, w):
     cutoff = len(G)-1
     visited = [source]
     stack = [iter(G[source])]
@@ -90,24 +90,25 @@ def all_paths(G, source, target, w):
         elif len(visited) < cutoff:
             if child == target:
                 if (visited[-1],child) in G.nodes():
-                    temp = G[visited[-1]][child]['weight']
+                    temp = G[visited[-1]][child][0][weight_name]
                 else:
-                    temp = G[child][visited[-1]]['weight']
+                    temp = G[child][visited[-1]][0][weight_name]
                 if weight+temp <= w:
                     yield visited + [target]
             elif child not in visited:
                 if (visited[-1],child) in G.nodes():
-                    weight += G[visited[-1]][child]['weight']
+                	print(
+                    weight += G[visited[-1]][child][0][weight_name]
                 else:
-                    weight += G[child][visited[-1]]['weight']
+                    weight += G[child][visited[-1]][0][weight_name]
                 visited.append(child)
                 stack.append(iter(G[child]))
         else: 
             if child == target or target in children:
                 if (visited[-1],child) in G.nodes():
-                    temp = G[visited[-1]][child]['weight']
+                    temp = G[visited[-1]][child][0][weight_name]
                 else:
-                    temp = G[child][visited[-1]]['weight']
+                    temp = G[child][visited[-1]][0][weight_name]
                 if weight+temp <= w:
                     yield visited + [target]
             stack.pop()
