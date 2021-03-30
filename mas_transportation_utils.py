@@ -73,10 +73,26 @@ def print_user_perception(user, G, step_by_step=False):
         plt.title("Road network")
         plt.show()
 
+def compute_shortest_path_distance(G, SP):
+    SPd = 0
+    for i in range(len(SP)-1):
+        node1 = SP[i]
+        node2 = SP[i+1]
+        SPd += G.get_edge_data(node1,node2)[0]['length']
+    return SPd
+
+def compute_shortest_path_time(G, SP):
+    SPt = 0
+    for i in range(len(SP)-1):
+        node1 = SP[i]
+        node2 = SP[i+1]
+        SPt += G.get_edge_data(node1,node2)[0]['travel_time']
+    return SPt
+
 
 #fonction utile pour plus tard
 #recupere tout les chemins d'un noeud à un autre avec un cutoff de w basé sur la valeur des arretes
-def all_paths(G, source, target, weight_name, w):
+'''def all_paths(G, source, target, weight_name, w):
     cutoff = len(G)-1
     visited = [source]
     stack = [iter(G[source])]
@@ -112,4 +128,4 @@ def all_paths(G, source, target, weight_name, w):
                 if weight+temp <= w:
                     yield visited + [target]
             stack.pop()
-            visited.pop()
+            visited.pop()'''
