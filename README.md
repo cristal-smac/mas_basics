@@ -2,13 +2,13 @@
 
 Feuilles python jupyter qui ont pour objectif de montrer les bases d'un système multi-agents. 
 Nous montrons notamment ici comment concevoir un tel système en Python, à travers des petites applications avec exercices.
-Toutes ces feuilles sont associées à une machne virtuelle Binder pour vous éviter d'installer quoi que ce soit
+Toutes ces feuilles sont associées à une machine virtuelle Binder pour vous éviter d'installer quoi que ce soit.
 
 # The Multiagent bases
 
 Python jupyter sheets that aim to show the basics of a multi-agent system. 
 We show here how to design such a system in Python, through small applications with exercises.
-All these sheets are associated with a virtual Binder machine to avoid installing anything
+All these sheets are associated with a virtual Binder machine to avoid installing anything.
 
 
 ********
