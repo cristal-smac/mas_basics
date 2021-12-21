@@ -13,7 +13,7 @@ All these sheets are associated with a virtual Binder machine to avoid installin
 
 ********
 
-## 1. MASbasics
+## 1. MAS basics
 This jupiter sheet aims to show the basics of a multi-agent system. 
 In particular, we show here how to design such a system in Python, through a small application of agents in social networks.
 
