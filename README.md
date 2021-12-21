@@ -5,6 +5,12 @@ Nous montrons notamment ici comment concevoir un tel système en Python, à trav
 
 # The Multiagent bases
 
+Python jupyter sheets that aim to show the basics of a multi-agent system. 
+We show here how to design such a system in Python, through small applications with exercises.
+
+#-----
+
+# mas_basics
 This jupiter sheet aims to show the basics of a multi-agent system. 
 In particular, we show here how to design such a system in Python, through a small application of agents in social networks.
 
@@ -12,7 +18,7 @@ Français : [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.or
 
 # A minimal MAS transportation system
 
-This jupyter sheet follows the 'mas_bacis'. Its purpose is to show how to represent a carpooling system with the help of a multi-agent system and to be able to carry out some experiments with it.
+This jupyter sheet follows the `mas_bacis`. Its purpose is to show how to represent a carpooling system with the help of a multi-agent system and to be able to carry out some experiments with it.
 
 Français : [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/cristal-smac/mas_basics/HEAD?filepath=mas_transportation_basics_fr.ipynb)
 
