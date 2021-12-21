@@ -10,19 +10,19 @@ We show here how to design such a system in Python, through small applications w
 
 ********
 
-1. MASbasics
+##1. MASbasics
 This jupiter sheet aims to show the basics of a multi-agent system. 
 In particular, we show here how to design such a system in Python, through a small application of agents in social networks.
 
 Français : [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/cristal-smac/mas_basics/HEAD?filepath=mas_basics_fr.ipynb)
 
-1. A minimal MAS transportation system
+##2. A minimal MAS transportation system
 
 This jupyter sheet follows the *mas_basics*. Its purpose is to show how to represent a carpooling system with the help of a multi-agent system and to be able to carry out some experiments with it.
 
 Français : [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/cristal-smac/mas_basics/HEAD?filepath=mas_transportation_basics_fr.ipynb)
 
-1. A  MAS to compute social welfare
+##3. A  MAS to compute social welfare
 
 This jupyter sheet follows the *mas_basics*. Its purpose is to show how to code a socical welfare problem, and to solve this problem with a multi-agent system
 
