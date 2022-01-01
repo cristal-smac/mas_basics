@@ -27,6 +27,6 @@ Français : [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.or
 
 ## 3. A  MAS to compute social welfare
 
-This jupyter sheet follows the *mas_basics*. Its purpose is to show how to code a socical welfare problem, and to solve this problem with a multi-agent system
+This jupyter sheet follows the *mas_basics*. Its purpose is to show how to code a social welfare problem, and to solve this problem with a multi-agent system
 
 Français : [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/cristal-smac/mas_basics/HEAD?filepath=mas_socialWelfare_basics_fr.ipynb)
